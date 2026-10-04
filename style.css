@@ -13,6 +13,12 @@ body {
     height: 100vh;
 }
 
+#root {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .container {
     background: #fff;
     padding: 30px;
@@ -76,10 +82,6 @@ button:hover {
     cursor: pointer;
 }
 
-.hidden {
-    display: none;
-}
-
 .message {
     text-align: center;
     margin-top: 15px;
@@ -88,12 +90,55 @@ button:hover {
     font-size: 14px;
 }
 
-.success { 
-    background: #d4edda; 
-    color: #155724; 
+.success {
+    background: #d4edda;
+    color: #155724;
 }
 
-.error { 
-    background: #f8d7da; 
-    color: #721c24; 
+.error {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.role-switch {
+    display: flex;
+    margin-bottom: 20px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.role-btn {
+    margin: 0;
+    border-radius: 0;
+    background: #fff;
+    color: #007bff;
+    padding: 10px;
+}
+
+.role-btn:hover {
+    background: #e7f1ff;
+}
+
+.role-btn.active {
+    background: #007bff;
+    color: #fff;
+}
+
+.dashboard {
+    max-width: 600px;
+    text-align: center;
+}
+
+.dashboard p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.logout-btn {
+    background: #dc3545;
+}
+
+.logout-btn:hover {
+    background: #b02a37;
 }
