@@ -1,4 +1,4 @@
-/* Customer flow. Load BEFORE app.jsx. Uses globals from app.jsx: CARS, INITIAL_STATUS, Badge, Table, logout, navigate */
+
 
 const CENTERS = [
   { name: 'Syracuse Downtown Center', address: '120 Genesee St, Syracuse, NY 13202', hours: 'Daily, 7:00 AM - 9:00 PM', phone: '(315) 555-0142', lat: 43.0481, lng: -76.1474 },
