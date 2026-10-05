@@ -18,8 +18,8 @@ function seedAdmin() {
     location: {
       name: 'Syracuse Downtown Center',
       address: '120 Genesee St, Syracuse, NY 13202',
-      hours: 'Daily, 7:00 AM - 9:00 PM',
-      phone: '(315) 555-0142',
+      hours: 'Daily, 7:00 AM - 9:00 PM'
+      
     },
   };
   saveUsers(users);
