@@ -414,20 +414,7 @@ function Login() {
   );
 }
 
-function CustomerDashboard({ session }) {
-  function handleLogout() {
-    logout();
-    navigate('#/');
-  }
 
-  return (
-    <div className="container dashboard">
-      <h2>Welcome, {session.name}</h2>
-      <p>Browse available cars, book a rental, and view your booking history here.</p>
-      <button className="logout-btn" onClick={handleLogout}>Log Out</button>
-    </div>
-  );
-}
 
 function AdminDashboard({ session }) {
   const [activeTab, setActiveTab] = useState('inventory');
@@ -481,7 +468,7 @@ function App() {
 
   if (hash === '#/customer') {
     if (!session || session.role !== 'user') return <Redirect to="#/" />;
-    return <CustomerDashboard session={session} />;
+    return <CustomerApp session={session} />;
   }
 
   if (hash === '#/admin') {
