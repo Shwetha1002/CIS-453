@@ -1,0 +1,23 @@
+/* Append to style.css (or load as a second stylesheet) */
+.filters { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-bottom: 12px; }
+.filters input { padding: 8px; font-size: 14px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.chip { width: auto; margin: 0; padding: 6px 14px; background: #fff; color: #007bff; border: 1px solid #007bff; border-radius: 16px; font-size: 13px; }
+.chip:hover { background: #e7f1ff; }
+.chip.active { background: #007bff; color: #fff; }
+.car-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 14px; }
+.car-card { border: 1px solid #e3e6ea; border-radius: 8px; padding: 14px; background: #f8f9fb; }
+.car-card h4 { color: #333; margin-bottom: 2px; }
+.car-card button { margin-top: 8px; padding: 8px; font-size: 14px; }
+.car-img { font-size: 40px; text-align: center; background: #fff; border-radius: 6px; padding: 10px; margin-bottom: 10px; }
+.car-img.big { font-size: 72px; max-width: 320px; }
+.car-rate { color: #333; font-size: 20px; margin-top: 6px; }
+.car-rate span { font-size: 13px; color: #888; }
+.back { display: inline-block; margin-bottom: 14px; color: #007bff; cursor: pointer; font-size: 14px; }
+.narrow { max-width: 420px; }
+.total { margin: 10px 0; color: #333; }
+button:disabled { background: #aab; cursor: not-allowed; }
+.row-actions { display: flex; gap: 6px; }
+.row-actions button { width: auto; margin: 0; padding: 6px 10px; font-size: 13px; }
+.inline-dates { display: flex; gap: 6px; }
+.inline-dates input { padding: 4px; font-size: 13px; }
