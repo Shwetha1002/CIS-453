@@ -67,7 +67,6 @@ td select, td input { width: auto; padding: 6px 8px; }
 .badge-maintenance, .badge-pending { background: #fef3c7; color: #92400e; }
 .badge-cancelled, .badge-refunded { background: #fee2e2; color: #991b1b; }
 
-/* customer */
 .filters { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-bottom: 12px; }
 .main > div > select { width: auto; min-width: 180px; margin-bottom: 20px; }
 .car-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
