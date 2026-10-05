@@ -1,10 +1,10 @@
 
 
 const CENTERS = [
-  { name: 'Syracuse Downtown Center', address: '120 Genesee St, Syracuse, NY 13202', hours: 'Daily, 7:00 AM - 9:00 PM', phone: '(315) 555-0142', lat: 43.0481, lng: -76.1474 },
-  { name: 'Syracuse Airport Center', address: '1000 Col Eileen Collins Blvd, Syracuse, NY 13212', hours: 'Daily, 5:00 AM - 11:00 PM', phone: '(315) 555-0177', lat: 43.1112, lng: -76.1063 },
-  { name: 'Destiny USA Center', address: '9090 Destiny USA Dr, Syracuse, NY 13204', hours: 'Daily, 9:00 AM - 8:00 PM', phone: '(315) 555-0163', lat: 43.0698, lng: -76.1675 },
-  { name: 'Fayetteville Center', address: '400 E Genesee St, Fayetteville, NY 13066', hours: 'Mon-Sat, 8:00 AM - 6:00 PM', phone: '(315) 555-0119', lat: 43.0298, lng: -75.9707 },
+  { name: 'Syracuse Downtown Center', address: '120 Genesee St, Syracuse, NY 13202', hours: 'Daily, 7:00 AM - 9:00 PM', lat: 43.0481, lng: -76.1474 },
+  { name: 'Syracuse Airport Center', address: '1000 Col Eileen Collins Blvd, Syracuse, NY 13212', hours: 'Daily, 5:00 AM - 11:00 PM', lat: 43.1112, lng: -76.1063 },
+  { name: 'Destiny USA Center', address: '9090 Destiny USA Dr, Syracuse, NY 13204', hours: 'Daily, 9:00 AM - 8:00 PM', lat: 43.0698, lng: -76.1675 },
+  { name: 'Fayetteville Center', address: '400 E Genesee St, Fayetteville, NY 13066', hours: 'Mon-Sat, 8:00 AM - 6:00 PM', lat: 43.0298, lng: -75.9707 },
 ];
 
 function distKm(a, b) {
