@@ -34,10 +34,9 @@ function validDates(s, e) {
 function CarCard({ car, onOpen }) {
   return (
     <div className="car-card">
-      <div className="car-img">🚗</div>
       <h4>{car.name}</h4>
       <p className="side-text">{car.category}</p>
-      <p className="car-rate">${car.rate}<span> / day</span></p>
+      <p>${car.rate} / day</p>
       <button onClick={() => onOpen(car)}>View details</button>
     </div>
   );
@@ -67,11 +66,9 @@ function BrowsePage({ onOpen }) {
         <input type="date" min={todayStr()} value={s} onChange={(x) => setS(x.target.value)} />
         <input type="date" min={s || todayStr()} value={e} onChange={(x) => setE(x.target.value)} />
       </div>
-      <div className="chips">
-        {cats.map((c) => (
-          <button key={c} className={`chip ${cat === c ? 'active' : ''}`} onClick={() => setCat(c)}>{c}</button>
-        ))}
-      </div>
+      <select value={cat} onChange={(x) => setCat(x.target.value)}>
+        {cats.map((c) => <option key={c}>{c}</option>)}
+      </select>
       {list.length === 0 ? <p className="side-text">No cars match your filters.</p> : (
         <div className="car-grid">{list.map((c) => <CarCard key={c.id} car={c} onOpen={onOpen} />)}</div>
       )}
@@ -84,7 +81,6 @@ function DetailsPage({ car, center, onBack, onBook }) {
   return (
     <div>
       <a className="back" onClick={onBack}>← Back to cars</a>
-      <div className="car-img big">🚗</div>
       <h3 className="tab-title">{car.name}</h3>
       <Table headers={['Category', 'Plate', 'Rate / day', 'Pickup center', 'Status']}>
         <tr><td>{car.category}</td><td>{car.plate}</td><td>${car.rate}</td><td>{center.name}</td><td><Badge text={status === 'Maintenance' ? 'Maintenance' : 'Available'} /></td></tr>
@@ -113,7 +109,7 @@ function BookPage({ car, center, onBack, onNext }) {
       <p className="side-text">Pickup & return at {center.name}</p>
       <div className="form-group"><label>Pickup date</label><input type="date" min={todayStr()} value={s} onChange={(x) => setS(x.target.value)} /></div>
       <div className="form-group"><label>Return date</label><input type="date" min={s || todayStr()} value={e} onChange={(x) => setE(x.target.value)} /></div>
-      {total > 0 && <p className="total">{dayCount(s, e)} day(s) × ${car.rate} = <b>${total}</b></p>}
+      {total > 0 && <p>{dayCount(s, e)} day(s) × ${car.rate} = <b>${total}</b></p>}
       {err && <div className="message error">{err}</div>}
       <button onClick={next}>Continue to payment</button>
     </div>
@@ -144,7 +140,7 @@ function PayPage({ car, center, draft, session, onBack, onDone }) {
       <a className="back" onClick={onBack}>← Back</a>
       <h3 className="tab-title">Payment</h3>
       <p className="side-text">{car.name}, {draft.start} to {draft.end}</p>
-      <p className="total">Total due: <b>${draft.total}</b></p>
+      <p>Total due: <b>${draft.total}</b></p>
       <div className="form-group"><label>Name on card</label><input required value={f.name} onChange={set('name')} /></div>
       <div className="form-group"><label>Card number</label><input required inputMode="numeric" placeholder="1234 5678 9012 3456" value={f.number} onChange={set('number')} /></div>
       <div className="form-group"><label>Expiry (MM/YY)</label><input required placeholder="MM/YY" value={f.exp} onChange={set('exp')} /></div>
