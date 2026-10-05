@@ -1,6 +1,6 @@
 const { useState, useEffect } = React;
 
-/* ---------- auth (prototype only, localStorage) ---------- */
+
 function getUsers() {
   return JSON.parse(localStorage.getItem('users')) || {};
 }
@@ -55,7 +55,7 @@ function logout() {
 
 seedAdmin();
 
-/* ---------- tiny hash router ---------- */
+
 function navigate(path) {
   window.location.hash = path;
 }
@@ -77,7 +77,7 @@ function Redirect({ to }) {
   return null;
 }
 
-/* ---------- random sample data ---------- */
+
 const CARS = [
   { id: 'C-101', name: 'Toyota Corolla', category: 'Sedan', plate: 'JKL-4821', rate: 45 },
   { id: 'C-102', name: 'Honda Civic', category: 'Sedan', plate: 'MNP-3390', rate: 48 },
@@ -120,7 +120,7 @@ const PAYMENTS = [
   { id: 'P-9007', booking: 'B-2007', customer: 'Ella Brooks', amount: 90, method: 'PayPal', status: 'Refunded' },
 ];
 
-/* ---------- small helpers ---------- */
+
 function Badge({ text }) {
   const cls = text.toLowerCase();
   return <span className={`badge badge-${cls}`}>{text}</span>;
@@ -143,7 +143,7 @@ function Table({ headers, children }) {
   );
 }
 
-/* ---------- admin tabs ---------- */
+
 function InventoryTab() {
   return (
     <div>
@@ -270,7 +270,6 @@ const TABS = [
   { id: 'dashboard', label: 'View admin dashboard', component: DashboardTab },
 ];
 
-/* ---------- pages ---------- */
 function Login() {
   const [mode, setMode] = useState('login');
   const [role, setRole] = useState('user');
@@ -461,7 +460,7 @@ function AdminDashboard({ session }) {
   );
 }
 
-/* ---------- app / routing with role guards ---------- */
+
 function App() {
   const hash = useHash();
   const session = getSession();
